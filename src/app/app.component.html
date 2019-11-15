@@ -1,0 +1,14 @@
+<edo-button *axLazyElement
+  [edoValue]="'-'"
+  (edoClick)="onMinusClick($event)"
+></edo-button>
+
+<edo-input *axLazyElement
+  [edoValue]="value"
+  (edoChange)="onInputChange($event)"
+></edo-input>
+
+<edo-button *axLazyElement
+  [edoValue]="'+'"
+  (edoClick)="onPlusClick($event)"
+></edo-button>
