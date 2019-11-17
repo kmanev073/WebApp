@@ -29,7 +29,7 @@
               {
                 "glob": "{*loader.js,bundles/*.js,*adapter.js}",
                 "input": "node_modules/@webcomponents/webcomponentsjs/",
-                "output": "node_modules/@webcomponents/webcomponentsjs"
+                "output": "webcomponentsjs"
               }
             ],
             "styles": [
