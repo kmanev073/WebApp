@@ -8,7 +8,7 @@ import { LazyElementsModule } from '@angular-extensions/elements';
 })
 export class AppComponent {
 
-  value: number = 0;
+  value = 0;
 
   onMinusClick(event: MouseEvent) {
     this.value--;
