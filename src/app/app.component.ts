@@ -18,7 +18,10 @@ export class AppComponent {
     this.value++;
   }
 
-  onInputChange(event: CustomEvent) {
-    console.log(event);
+  onInput(event: any) {
+    this.value = event.detail.target.value;
+    if (!this.value) {
+      this.value = 0;
+    }
   }
 }

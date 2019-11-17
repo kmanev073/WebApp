@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 
 const options: LazyElementModuleOptions = {
   elementConfigs: [
-    { tag: 'edo-button', url: 'https://kmanev073.github.io/EdoButton/dist/main-es2015.js' },
+    { tag: 'edo-button', url: 'http://kmanev073.github.io/EdoButton/dist/main-es2015.js' },
     { tag: 'edo-input', url: 'https://kmanev073.github.io/EdoInput/dist/main-es2015.js' }
   ]
 };
@@ -16,13 +16,13 @@ const options: LazyElementModuleOptions = {
   declarations: [
     AppComponent
   ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
+  ],
   imports: [
     CommonModule,
     BrowserModule,
     LazyElementsModule.forFeature(options),
-  ],
-  schemas: [
-    CUSTOM_ELEMENTS_SCHEMA
   ],
   providers: [],
   bootstrap: [AppComponent]

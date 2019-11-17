@@ -6,11 +6,20 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <script src="https://kmanev073.github.io/EdoButton/dist/polyfills-es2015.js"></script>
-  <script src="https://kmanev073.github.io/EdoButton/dist/scripts.js" defer></script>
-  <script src="https://kmanev073.github.io/EdoButton/dist/polyfill-webcomp.js" defer></script>
 </head>
 <body>
   <app-root></app-root>
+  <!-- This div is needed when targeting ES5.
+  It will add the adapter to browsers that support customElements, which require ES6 classes -->
+  <div id="ce-es5-shim">
+    <script type="text/javascript">
+      if (!window.customElements) {
+        var ceShimContainer = document.querySelector('#ce-es5-shim');
+        ceShimContainer.parentElement.removeChild(ceShimContainer);
+      }
+    </script>
+    <script defer type="text/javascript" src="node_modules/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js"></script>
+  </div>
+  <script defer src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
 </body>
 </html>
